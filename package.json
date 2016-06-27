@@ -1,0 +1,44 @@
+{
+  "name": "ss2vue",
+  "description": "Snakeskin to React.",
+  "license": "MIT",
+  "homepage": "https://github.com/SnakeskinTpl/ss2vue",
+  "main": "index.js",
+  "version": "1.0.0",
+  "author": {
+    "name": "kobezzza",
+    "email": "kobezzza@mail.ru",
+    "url": "https://github.com/kobezzza"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/SnakeskinTpl/ss2vue.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SnakeskinTpl/ss2vue/issues"
+  },
+  "engines": {
+    "node": ">= 0.10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "keywords": [
+    "react",
+    "snakeskin"
+  ],
+  "devDependencies": {
+    "eslint": "^2.13.1",
+    "gulp": "^3.9.0",
+    "snakeskin": "^7.1.8",
+    "vue-template-compiler": "^2.0.0-alpha.6"
+  },
+  "peerDependencies": {
+    "gulp": "*",
+    "snakeskin": "^7.1.8",
+    "vue-template-compiler": "*"
+  },
+  "dependencies": {
+    "core-js": "^2.4.0"
+  }
+}
