@@ -1,7 +1,7 @@
 ss2vue
 ========
 
-Convert [Snakeskin](https://github.com/SnakeskinTpl/Snakeskin) to [React](https://facebook.github.io/react).
+Convert [Snakeskin](https://github.com/SnakeskinTpl/Snakeskin) to [Vue2](http://vuejs.org).
 
 [![NPM version](http://img.shields.io/npm/v/ss2vue.svg?style=flat)](http://badge.fury.io/js/ss2vue)
 [![Build Status](http://img.shields.io/travis/SnakeskinTpl/ss2vue.svg?style=flat&branch=master)](https://travis-ci.org/SnakeskinTpl/ss2vue)

@@ -1,10 +1,10 @@
 {
   "name": "ss2vue",
-  "description": "Snakeskin to React.",
+  "description": "Snakeskin to Vue2.",
   "license": "MIT",
   "homepage": "https://github.com/SnakeskinTpl/ss2vue",
   "main": "index.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": {
     "name": "kobezzza",
     "email": "kobezzza@mail.ru",
@@ -24,7 +24,7 @@
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "keywords": [
-    "react",
+    "vue",
     "snakeskin"
   ],
   "devDependencies": {
