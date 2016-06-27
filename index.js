@@ -44,7 +44,7 @@ function rewrite(attr) {
 
 function setParams(p) {
 	p = Object.assign({}, p, {useStrict: false});
-	p.adaptorOptions = Object.assign({}, p.adaptorOptions, p.adaptorOptions.requireImgUrls ? options : undefined);
+	p.adapterOptions = Object.assign({}, p.adapterOptions, p.adapterOptions.requireImgUrls ? options : undefined);
 	return p;
 }
 
@@ -59,8 +59,8 @@ function template(id, fn, txt, p) {
 	return id + ' = ' + fn + 'return ' + txt + '};';
 }
 
-exports.adaptor = function (txt, opt_params, opt_info) {
-	return snakeskin.adaptor(txt, {
+exports.adapter = function (txt, opt_params, opt_info) {
+	return snakeskin.adapter(txt, {
 		setParams: setParams,
 		template: template
 	}, opt_params, opt_info);
