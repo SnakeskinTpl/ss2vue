@@ -9,7 +9,7 @@ Convert [Snakeskin](https://github.com/SnakeskinTpl/Snakeskin) to [React](https:
 [![NPM devDependencies](http://img.shields.io/david/dev/SnakeskinTpl/ss2vue.svg?style=flat)](https://david-dm.org/SnakeskinTpl/ss2vue#info=devDependencies&view=table)
 [![NPM peerDependencies](https://david-dm.org/SnakeskinTpl/ss2vue/peer-status.svg)](https://david-dm.org/SnakeskinTpl/ss2vue#info=peerDependencies)
 
-## [adaptorOptions](https://www.npmjs.com/package/vue-template-compiler)
+## [adapterOptions](https://www.npmjs.com/package/vue-template-compiler)
 ## [License](https://github.com/SnakeskinTpl/ss2vue/blob/master/LICENSE)
 
 The MIT License.
