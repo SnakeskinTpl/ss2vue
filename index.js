@@ -54,7 +54,7 @@ function template(id, fn, txt, p) {
 	txt = '{' +
 		'render:' + toFunction(compiled.render) + ',' +
 		'staticRenderFns: [' + compiled.staticRenderFns.map(toFunction).join(',') + ']' +
-	'}';
+	'};';
 
 	return id + ' = ' + fn + 'return ' + txt + '};';
 }
