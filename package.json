@@ -4,7 +4,7 @@
   "license": "MIT",
   "homepage": "https://github.com/SnakeskinTpl/ss2vue",
   "main": "index.js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": {
     "name": "kobezzza",
     "email": "kobezzza@mail.ru",
@@ -28,7 +28,7 @@
     "snakeskin"
   ],
   "devDependencies": {
-    "eslint": "^2.13.1",
+    "eslint": "^3.0.0",
     "snakeskin": "^7.1.9",
     "vue-template-compiler": "^2.0.0-alpha.6"
   },

@@ -6,7 +6,7 @@
  * https://github.com/SnakeskinTpl/ss2vue/blob/master/LICENSE
  */
 
-require('core-js/es6/object');
+require('core-js');
 
 var
 	snakeskin = require('snakeskin'),
