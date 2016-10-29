@@ -1,3 +1,5 @@
+'use strict';
+
 /*!
  * ss2vue
  * https://github.com/SnakeskinTpl/ss2vue
@@ -6,21 +8,19 @@
  * https://github.com/SnakeskinTpl/ss2vue/blob/master/LICENSE
  */
 
-require('core-js');
-
-var
+const
 	snakeskin = require('snakeskin'),
 	compiler = require('vue-template-compiler');
 
 function toFunction(code) {
-	return 'function () {' + code + '}';
+	return `function () {${code}}`;
 }
 
-var options = {
+const options = {
 	modules: [{
-		postTransformNode: function (el) {
+		postTransformNode(el) {
 			if (el.tag === 'img') {
-				el.staticAttrs && el.staticAttrs.some(rewrite);
+				el.attrs && el.attrs.some(rewrite);
 			}
 		}
 	}]
@@ -28,14 +28,15 @@ var options = {
 
 function rewrite(attr) {
 	if (attr.name === 'src') {
-		var firstChar = attr.value[1];
+		const
+			firstChar = attr.value[1];
 
 		if (firstChar === '.' || firstChar === '~') {
 			if (firstChar === '~') {
-				attr.value = '"' + attr.value.slice(2);
+				attr.value = `"${attr.value.slice(2)}`;
 			}
 
-			attr.value = 'require(' + attr.value + ')';
+			attr.value = `require(${attr.value})`;
 		}
 
 		return true;
@@ -49,19 +50,17 @@ function setParams(p) {
 }
 
 function template(id, fn, txt, p) {
-	var compiled = compiler.compile(txt, p);
+	const
+		compiled = compiler.compile(txt, p);
 
-	txt = '{' +
-		'render:' + toFunction(compiled.render) + ',' +
-		'staticRenderFns: [' + compiled.staticRenderFns.map(toFunction).join(',') + ']' +
-	'};';
+	txt = `{
+		render: ${toFunction(compiled.render)},
+		staticRenderFns: [${compiled.staticRenderFns.map(toFunction).join(',')}]
+	};`;
 
-	return id + ' = ' + fn + 'return ' + txt + '};';
+	return `${id} = ${fn}return ${txt}};`;
 }
 
 exports.adapter = function (txt, opt_params, opt_info) {
-	return snakeskin.adapter(txt, {
-		setParams: setParams,
-		template: template
-	}, opt_params, opt_info);
+	return snakeskin.adapter(txt, {setParams, template}, opt_params, opt_info);
 };
