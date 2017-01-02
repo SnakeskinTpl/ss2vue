@@ -10,7 +10,8 @@
 
 const
 	snakeskin = require('snakeskin'),
-	compiler = require('vue-template-compiler');
+	compiler = require('vue-template-compiler'),
+	transpiler = require('vue-template-es2015-compiler');
 
 function toFunction(code) {
 	return `function () {${code}}`;
@@ -58,7 +59,14 @@ function template(id, fn, txt, p) {
 		staticRenderFns: [${compiled.staticRenderFns.map(toFunction).join(',')}]
 	};`;
 
-	return `${id} = ${fn}return ${txt}};`;
+	let
+		res = `${id} = ${fn}return ${txt}};`;
+
+	if (p.transpiler) {
+		res = transpiler(res, p.transpilerOptions);
+	}
+
+	return res;
 }
 
 exports.adapter = function (txt, opt_params, opt_info) {

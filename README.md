@@ -10,6 +10,20 @@ Convert [Snakeskin](https://github.com/SnakeskinTpl/Snakeskin) to [Vue2](http://
 [![NPM peerDependencies](http://img.shields.io/david/peer/SnakeskinTpl/ss2vue.svg?style=flat)](https://david-dm.org/SnakeskinTpl/ss2vue?type=peer)
 
 ## [adapterOptions](https://www.npmjs.com/package/vue-template-compiler)
+### transpiler
+
+Type: `Boolean`
+
+Default: `false`
+
+If the parameter is set to `true` the template will be translated after compiling by [vue-template-es2015-compiler](https://github.com/vuejs/vue-template-es2015-compiler).
+
+### transpilerOptions
+
+Type: `Object`
+
+Additional options for the transpiler.
+
 ## [License](https://github.com/SnakeskinTpl/ss2vue/blob/master/LICENSE)
 
 The MIT License.
